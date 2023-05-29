@@ -13,7 +13,6 @@
     "prisma:migrate": "prisma migrate deploy"
   },
   "dependencies": {
-    "@emailjs/browser": "^3.10.0",
     "@floating-ui/react": "^0.19.1",
     "@next/font": "^13.0.5",
     "@prisma/client": "^4.6.1",

@@ -2,7 +2,7 @@ import { getToken } from 'next-auth/jwt'
 import { NextRequest, NextResponse } from 'next/server'
 import { PAGE_NAMES } from 'utils/constants'
 
-const unprotectedRoutes = [PAGE_NAMES.login, PAGE_NAMES.register]
+// const unprotectedRoutes = [PAGE_NAMES.login, PAGE_NAMES.register]
 
 export default async function middleware(req: NextRequest) {
   // Get the pathname of the request (e.g. /, /analysis)
@@ -12,9 +12,9 @@ export default async function middleware(req: NextRequest) {
     secret: process.env.NEXTAUTH_SECRET,
   })
 
-  const routeIsProtected = !unprotectedRoutes.includes(path)
+  // const routeIsProtected = !unprotectedRoutes.includes(path)
 
-  if (!session && routeIsProtected) {
+  if (!session) {
     return NextResponse.redirect(new URL('/login', req.nextUrl))
   } else if (session && (path === '/login' || path === '/register')) {
     return NextResponse.redirect(new URL(PAGE_NAMES.root, req.nextUrl))

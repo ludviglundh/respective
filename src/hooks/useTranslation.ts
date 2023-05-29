@@ -1,15 +1,6 @@
 import { useTranslation as useTranslationNext } from 'next-i18next'
 
-export type TranslationType =
-  | 'common'
-  | 'pages'
-  | 'navbar'
-  | 'toast'
-  | 'event'
-  | 'table'
-  | 'validation'
-  | 'inputFields'
-  | 'response'
+export type TranslationType = 'common'
 
 export type Translate = (
   translationType: TranslationType,

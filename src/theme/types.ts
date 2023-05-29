@@ -1,39 +1,6 @@
-import { BadgeTheme } from 'components/Badge'
-import { ButtonTheme } from 'components/Button'
-import { ButtonGroupTheme } from 'components/Button/ButtonGroup'
-import { CheckboxTheme } from 'components/Checkbox'
-import { DropdownTheme } from 'components/Dropdown'
-import { HelperTextTheme } from 'components/HelperText'
-import { LabelTheme } from 'components/Label'
-import { ModalTheme } from 'components/Modal'
-import { NavbarTheme } from 'components/NavBar'
-import { PageTheme } from 'components/Page'
-import { RadioTheme } from 'components/Radio'
-import { SelectTheme } from 'components/Select'
-import { SpinnerTheme } from 'components/Spinner'
-import { TableTheme } from 'components/Table'
-import { TextAreaTheme } from 'components/TextArea'
-import { TextInputTheme } from 'components/TextInput'
-import { TooltipTheme } from 'components/Tooltip'
+
 
 export interface Theme {
-  navbar: NavbarTheme
-  page: PageTheme
-  dropdown: DropdownTheme
-  button: ButtonTheme
-  buttonGroup: ButtonGroupTheme
-  label: LabelTheme
-  textInput: TextInputTheme
-  helperText: HelperTextTheme
-  textarea: TextAreaTheme
-  radio: RadioTheme
-  checkbox: CheckboxTheme
-  select: SelectTheme
-  tooltip: TooltipTheme
-  table: TableTheme
-  spinner: SpinnerTheme
-  modal: ModalTheme
-  badge: BadgeTheme
 }
 
 export interface ThemeBoolean {

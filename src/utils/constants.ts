@@ -1,12 +1,5 @@
 export const PAGE_NAMES = {
-  root: '/dashboard',
-  login: '/login',
-  register: '/register',
-  events: '/events',
-  editEvent: '/events/edit',
-  createEvent: '/events/create',
-  settings: '/settings',
-  response: '/response/[eventId]',
+  root: '/',
 }
 
 export const DEVICE_SIZES: Record<string, number> = {

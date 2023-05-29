@@ -11,93 +11,22 @@ datasource db {
 }
 
 model User {
-  id       String    @id @default(uuid())
-  email    String    @unique
+  id       String  @id @default(uuid())
+  email    String  @unique
   password String
   name     String?
-  role     UserRole  @default(CONSUMER)
-  events   Event[]
-  contacts Contact[]
 }
 
-model Contact {
+model Retro {
+  id          String  @id @default(uuid())
+  name        String
+  description String?
+  cards       Card[]
+}
+
+model Card {
   id      String  @id @default(uuid())
-  name    String
-  email   String  @unique
-  user    User?   @relation(fields: [userId], references: [id])
-  userId  String?
-  events  Event[]
-  eventId String?
-}
-
-model Event {
-  id               String         @id @default(uuid())
-  name             String
-  description      String
-  date             EventDateRange @relation(fields: [eventDateRangeId], references: [id])
-  inputs           Input[]
-  invites          Contact[]
-  response         Response[]
-  user             User?          @relation(fields: [userId], references: [id])
-  userId           String?
-  createdAt        DateTime       @default(now())
-  updatedAt        DateTime       @default(now())
-  eventDateRangeId String
-}
-
-model EventDateRange {
-  id    String   @id @default(uuid())
-  start DateTime
-  end   DateTime
-  Event Event[]
-}
-
-model Input {
-  id          String    @id @default(uuid())
-  type        InputType
-  title       String
-  label       String
-  placeholder String?
-  options     Option[]
-  event       Event?    @relation(fields: [eventId], references: [id])
-  eventId     String?
-  required    Boolean?  @default(false)
-}
-
-model Response {
-  id        String          @id @default(uuid())
-  attending Boolean
-  inputs    ResponseInput[]
-  contactId String
-  event     Event           @relation(fields: [eventId], references: [id])
-  eventId   String
-}
-
-model ResponseInput {
-  id         String    @id @default(uuid())
-  inputId    String
-  value      String
-  response   Response? @relation(fields: [responseId], references: [id])
-  responseId String?
-}
-
-model Option {
-  id      String  @id @default(uuid())
-  value   String
-  label   String
-  input   Input?  @relation(fields: [inputId], references: [id])
-  inputId String?
-}
-
-enum UserRole {
-  ADMIN
-  CONSUMER
-}
-
-enum InputType {
-  TEXTINPUT
-  TEXTAREA
-  CHECKBOX
-  RADIOBUTTON
-  DROPDOWN
+  content String
+  Retro   Retro?  @relation(fields: [retroId], references: [id])
+  retroId String?
 }
