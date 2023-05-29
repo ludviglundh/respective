@@ -1,0 +1,136 @@
+{
+  "common": {
+    "createEvent": "Create Event",
+    "updateEvent": "Update Event",
+    "createField": "Create new Field",
+    "yes": "Yes",
+    "no": "No",
+    "send": "Send",
+    "name": "Name",
+    "email": "Email",
+    "show": "Show",
+    "add": "Add",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "required": "Required"
+  },
+  "validation": {
+    "required": "Required"
+  },
+  "inputFields": {
+    "checkbox": "Checkbox",
+    "dropdown": "Dropdown",
+    "radio": "Radio Button",
+    "textInput": "Text Input",
+    "textArea": "Text Area"
+  },
+  "pages": {
+    "dashboard": "Dashboard",
+    "settings": "My pages",
+    "event": {
+      "all": {
+        "header": "Your Events",
+        "empty": "No Events could be found! Time to create your first!"
+      },
+      "byId": "Event - {{name}}",
+      "create": "Create Event",
+      "update": "Update Event"
+    }
+  },
+  "table": {
+    "event": {
+      "headers": {
+        "name": "Name",
+        "description": "Description"
+      }
+    }
+  },
+  "navbar": {
+    "event": {
+      "header": "Event",
+      "dropdown": {
+        "create": "Create a new Event",
+        "all": "All Events"
+      }
+    },
+    "settings": "My pages",
+    "signOut": "Sign Out"
+  },
+  "toast": {
+    "createEvent": {
+      "success": "Your event was created! Navigating back to event list...",
+      "failure": "Your event could not be created."
+    },
+    "updateEvent": {
+      "success": "Your event was was updated! Navigating back to event list...",
+      "failure": "Your event could not be updated."
+    },
+    "response": {
+      "success": "Your response has been sent! Hope you have a great Event!",
+      "failure": "Your response has been sent."
+    }
+  },
+  "event": {
+    "information": {
+      "label": "Information"
+    },
+    "datetime": {
+      "label": "Date and time"
+    },
+    "date": {
+      "label": "Date",
+      "placeholder": "Select date for the event"
+    },
+    "time": {
+      "start": {
+        "label": "Start time for the event",
+        "placeholder": "00:00:00"
+      },
+      "end": {
+        "label": "End time for the event",
+        "placeholder": "00:00:00"
+      }
+    },
+    "name": {
+      "label": "Event name",
+      "placeholder": "A nice Event Name"
+    },
+    "description": {
+      "label": "Event description",
+      "placeholder": "Describe your event"
+    },
+    "fields": {
+      "header": "Create your fields",
+      "type": {
+        "label": "Select field type",
+        "placeholder": "",
+        "tooltip": "Choose what type of field you want the recipient to enter."
+      },
+      "title": {
+        "label": "Title",
+        "placeholder": "",
+        "tooltip": "Title for this field"
+      },
+      "label": {
+        "label": "Label",
+        "placeholder": "",
+        "tooltip": "Label for this field"
+      },
+      "placeholder": {
+        "label": "Placeholder",
+        "placeholder": "Example placeholder",
+        "tooltip": "Placeholder for this field"
+      },
+      "preview": "Preview"
+    },
+    "createNew": "Create another field"
+  },
+  "response": {
+    "attendingQuestion": "To begin with, are you attending?",
+    "yes": "I'm attending! 🤩",
+    "no": "I can't make it 😞",
+    "inputsHeader": "Please fill in the following questions from the organizer",
+    "contactsHeader": "Who are you?"
+  }
+}
