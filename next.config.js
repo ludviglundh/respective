@@ -8,7 +8,7 @@ const { i18n } = require('./next-i18next.config')
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    appDir: true,
+    serverActions: true,
     serverComponentsExternalPackages: ['prisma', '@prisma/client'],
   },
   env: {},

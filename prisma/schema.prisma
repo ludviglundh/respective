@@ -17,16 +17,42 @@ model User {
   name     String?
 }
 
-model Retro {
-  id          String  @id @default(uuid())
+model Invitee {
+  id    String  @id @default(uuid())
+  name  String?
+  email String?
+}
+
+model Board {
+  id          String   @id @default(uuid())
   name        String
   description String?
+  columns     Column[]
+  inviteLink  String
+  createdAt   DateTime @default(now())
+}
+
+model Column {
+  id          String  @id @default(uuid())
+  title       String
+  description String?
   cards       Card[]
+  board       Board?  @relation(fields: [boardId], references: [id])
+  boardId     String?
 }
 
 model Card {
-  id      String  @id @default(uuid())
-  content String
-  Retro   Retro?  @relation(fields: [retroId], references: [id])
-  retroId String?
+  id        String    @id @default(uuid())
+  content   String
+  votes     Int?      @default(0)
+  comments  Comment[]
+  Column    Column?   @relation(fields: [columnId], references: [id])
+  columnId  String?
+  createdAt DateTime? @default(now())
+}
+
+model Comment {
+  id     String  @id @default(uuid())
+  card   Card?   @relation(fields: [cardId], references: [id])
+  cardId String?
 }
